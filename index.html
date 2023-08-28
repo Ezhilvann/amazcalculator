@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calculator</title>
+	<link rel="stylesheet" type="text/css" href="cal.css">
+</head>
+<body>
+	<h1 class="c1">Enter the Number to Calculate the value</h1>
+	
+<!-- input type="submit" name="output"> -->
+<div class="c3">
+	<input  class="c5" type="text" id="input" name="input" placeholder="Enter the value"><br>
+
+<button class="c2" onclick="ret('1')">1</button>
+<button class="c2" onclick="ret('2')">2</button>
+<button class="c2" onclick="ret('3')">3</button>
+<button class="c2" onclick="ret('+')">+</button>   <br>
+<button class="c2" onclick="ret('4')">4</button>
+<button class="c2" onclick="ret('5')">5</button>
+<button class="c2" onclick="ret('6')">6</button>
+<button class="c2" onclick="ret('*')">*</button> <br>
+<button class="c2" onclick="ret('7')">7</button>
+<button class="c2" onclick="ret('8')">8</button>
+<button class="c2" onclick="ret('9')">9</button>  
+<button class="c2" onclick="ret('/')">/</button><br>
+<button class="c2" onclick="cl()">Clear</button>
+<button class="c2" onclick="ret('0')">0</button>
+<button class="c2" onclick="ret('-')">-</button>
+<br>
+
+<button  class="c2" onclick="run()">=</button>
+
+
+</div>
+
+</body>
+<script type="text/javascript">
+	function run(){
+		let a=document.getElementById('input').value
+		let b=eval(a)
+		let result=document.getElementById('input')
+		result.value=b
+
+	}
+	// input.addEventListener("keypress", function(event) {
+ //  if (event.key === "Enter") {
+ //    event.preventDefault();
+ //    document.getElementById("input").click();
+ //  }
+
+	function ret(value){
+            document.getElementById("input").value+=value;
+            updateDisplay();
+	}	
+	function cl(){
+               document.getElementById("input").value=' ';
+	}
+</script>
+</html>
